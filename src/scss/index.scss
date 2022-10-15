@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body{
+    background-color: #1B5E20;
+    padding: 20px 12px;
+}
+
+@import "./componentes/headerButton";
+@import "./componentes/logicaDelJuego";

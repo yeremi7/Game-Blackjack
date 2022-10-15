@@ -1,0 +1,79 @@
+.container_headerButton{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 0.1fr);
+    justify-items: center;
+    row-gap: 20px;
+}
+.title{
+    grid-row: 1;
+    font-size: 23px;
+    color: hsl(360, 0%, 95%); 
+    font-family: 'Merriweather', serif;
+}
+.container_buttons{
+    grid-row: 2;
+}
+button{
+    margin: 0 10px;
+    padding: 5px;
+    font-size: 13px;
+    color: hsl(360, 0%, 94%);
+    border-radius: 5px;
+    border:none;
+    box-shadow: 0px 1px 2px hsl(360, 0%, 70%);
+    font-weight: 600;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.nuevoJuego{
+    background-color: #F44336;
+
+    &:hover{
+      background-color: #d1463c;
+    }
+
+    &:active{
+      background-color: #F44336;  
+    }
+}
+.pedir{
+    padding: 5px 6px;
+    background-color: hsl(120, 43% , 48%);
+
+    &:hover{
+      background-color: #119247;
+    }
+    &:active{
+      background-color: hsl(120, 43% , 48%);
+    }
+}
+.detener{
+    background-color: hsl(120, 43% , 48%);
+    
+    &:hover{
+      background-color: #119247;
+    }
+    &:active{
+      background-color: hsl(120, 43% , 48%);  
+    }
+}
+.mismoTiempo{
+    background-color: hsl(120, 43% , 48%);
+
+    &:hover{
+      background-color: #119247; 
+    }
+    &:active{
+      background-color: hsl(120, 43% , 48%);  
+    }
+}
+
+
+
+@media screen and (max-width: 360px) {
+    button{
+        margin: 2px 6px;
+        padding: 4px;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #1B5E20;
+  padding: 20px 12px;
+}
+
+.container_headerButton {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (0.1fr)[2];
+      grid-template-rows: repeat(2, 0.1fr);
+  justify-items: center;
+  row-gap: 20px;
+}
+
+.title {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  font-size: 23px;
+  color: #f2f2f2;
+  font-family: 'Merriweather', serif;
+}
+
+.container_buttons {
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+button {
+  margin: 0 10px;
+  padding: 5px;
+  font-size: 13px;
+  color: #f0f0f0;
+  border-radius: 5px;
+  border: none;
+  -webkit-box-shadow: 0px 1px 2px #b3b3b3;
+          box-shadow: 0px 1px 2px #b3b3b3;
+  font-weight: 600;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.nuevoJuego {
+  background-color: #F44336;
+}
+
+.nuevoJuego:hover {
+  background-color: #d1463c;
+}
+
+.nuevoJuego:active {
+  background-color: #F44336;
+}
+
+.pedir {
+  padding: 5px 6px;
+  background-color: #46af46;
+}
+
+.pedir:hover {
+  background-color: #119247;
+}
+
+.pedir:active {
+  background-color: #46af46;
+}
+
+.detener {
+  background-color: #46af46;
+}
+
+.detener:hover {
+  background-color: #119247;
+}
+
+.detener:active {
+  background-color: #46af46;
+}
+
+.mismoTiempo {
+  background-color: #46af46;
+}
+
+.mismoTiempo:hover {
+  background-color: #119247;
+}
+
+.mismoTiempo:active {
+  background-color: #46af46;
+}
+
+@media screen and (max-width: 360px) {
+  button {
+    margin: 2px 6px;
+    padding: 4px;
+    font-size: 12px;
+  }
+}
+
+.container_jugadores {
+  margin-top: 1%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 0.1fr 7.5fr 0.1fr 7.5fr;
+      grid-template-rows: 0.1fr 7.5fr 0.1fr 7.5fr;
+  grid-auto-flow: dense;
+  row-gap: 17px;
+}
+
+.puntos_jugador {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  font-size: 21px;
+  font-weight: 700;
+  color: #ebebeb;
+  font-family: 'PT Serif', serif;
+}
+
+.img_jugador {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (120px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 120px);
+  -ms-grid-rows: (185px)[auto-fit];
+      grid-template-rows: repeat(auto-fit, 185px);
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  row-gap: 10px;
+}
+
+.img_jugador img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.puntos_computadora {
+  -ms-grid-row: 3;
+  grid-row: 3;
+  font-size: 21px;
+  font-weight: 700;
+  color: #ebebeb;
+  font-family: 'PT Serif', serif;
+}
+
+.img_computadora {
+  -ms-grid-row: 4;
+  grid-row: 4;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (120px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 120px);
+  -ms-grid-rows: (185px)[auto-fit];
+      grid-template-rows: repeat(auto-fit, 185px);
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  row-gap: 10px;
+  overflow: hidden;
+}
+
+.img_computadora img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 900px) {
+  .container_jugadores {
+    margin-top: 5%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 0.1fr auto 0.1fr auto;
+        grid-template-rows: 0.1fr auto 0.1fr auto;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .img_jugador {
+    -ms-grid-columns: (90px)[auto-fit];
+        grid-template-columns: repeat(auto-fit, 90px);
+    -ms-grid-rows: (140px)[auto-fit];
+        grid-template-rows: repeat(auto-fit, 140px);
+  }
+  .img_computadora {
+    -ms-grid-columns: (90px)[auto-fit];
+        grid-template-columns: repeat(auto-fit, 90px);
+    -ms-grid-rows: (140px)[auto-fit];
+        grid-template-rows: repeat(auto-fit, 140px);
+  }
+}
+/*# sourceMappingURL=index.css.map */
