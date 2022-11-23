@@ -221,7 +221,7 @@ const LogicaDelJuego = () => {
 
             <section className="container_jugadores" >
 
-                <h2 className  ="puntos_jugador" > Jugador - <small ref={small_jugador} >0</small> </h2>
+                <h2 className  ="puntos_jugador" > Jugado - <small ref={small_jugador} >0</small> </h2>
 
                 <div ref={insertar_carta_jugador}  className="img_jugador"></div>
             
