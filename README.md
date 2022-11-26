@@ -19,6 +19,6 @@ La opcion 2: Consiste en que el jugador cuando muestre una carta la computadora 
 
 ## Los conocimientos que se aplicaron:
 
-En el proceso del proyecto los conocimientos que se pusieron en marcha para la finalizacion de este mismo, fue la aplicacion de los hooks tales como el useState, useEffect, useRef, y para el contextAPI se utilizo el useContext, con el objetivo de cambiar los estados del juego segun la logica que tiene, tambien se aplico styled-components para inyectar CSS en JavaScript para cambiar algunos estilos de forma dinamica, juntamente se colocaron algunos eventos como el evento onClick que lleva en si la logica JavaScript que se adquirio por medio de cursos orientados ha este lenguaje programacion.
+En el proceso del proyecto los conocimientos que se pusieron en marcha para la finalizacion de este mismo, fue la aplicacion de los hooks tales como el useState, useEffect, useRef, y para el contextAPI se utilizo el useContext, con el objetivo de cambiar los estados del juego segun la logica que tiene, tambien se aplico styled-components para inyectar CSS en JavaScript para cambiar algunos estilos de forma dinamica, juntamente se colocaron algunos eventos como el evento onClick que lleva en si la logica JavaScript que se adquirio por medio de cursos orientados ha este lenguaje programacion. [Link](https://game-blackjack-4373.netlify.app/)
 
 
