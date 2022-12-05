@@ -37,7 +37,7 @@ const LogicaDelJuego = () => {
 
             if (puntajeDelJugador >= 21) {
                 logicaComputadora(puntajeDelJugador);
-                mensajeGanador();
+                mensajeGanador()
                 
                 pedir.current.disabled = true;
                 pedir.current.style.backgroundColor='#119247';
