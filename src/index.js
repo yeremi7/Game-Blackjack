@@ -2,13 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
-import { ProovedorTema } from "./contexto/baseContexto";
+import { ProovedorState } from "./contexto/EstadosContexto";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ProovedorTema>
+    <ProovedorState>
       <App />
-    </ProovedorTema>
+    </ProovedorState>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,6 +1,6 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext, useEffect, useRef} from 'react';
 import style, {keyframes} from "styled-components";
-import { base } from "../contexto/baseContexto";
+import { stateContext } from "../contexto/EstadosContexto";
 
 const slideDown = keyframes`
 0%{
@@ -15,9 +15,9 @@ const slideDown = keyframes`
     transform: translateY(0.80rem);
     opacity: 1;
 }
-45%{
+70%{
     transform: translateY(0.80rem);
-    opacity: 0;
+    opacity: 1;
 }
 100%{
     transform: translateY(0.80rem);
@@ -33,20 +33,20 @@ const ContenedorAlerta = style.div`
         width: 100%;
         margin-top: 5rem;
         padding-right: 5%;
-        animation: ${slideDown} 4s ease forwards;
+        animation: ${slideDown} 3s ease forwards;
         
         p{
             box-shadow: 0px 0px 10px rgb(190, 187, 187);
             color: white;
             font-size: 15px;
             background-color: ${(props) => {
-                if (props.alerta.tipo === 'Ganar') {
+                if (props.mensaje.tipo === 'Ganar') {
                     return '#38c950'
                 }
-                else if (props.alerta.tipo === 'Perder') {
+                else if (props.mensaje.tipo === 'Perder') {
                     return '#8792F1'
                 }
-                else if (props.alerta.tipo === 'Empate') {
+                else if (props.mensaje.tipo === 'Empate') {
                     return '#989945'
                 }else{
                     return '#E34747'
@@ -67,36 +67,37 @@ const ContenedorAlerta = style.div`
         }
 `
 
-const Alerta = () => {
+const MensajeGanador = () => {
 
-    const {estadoAlerta, cambiarEstadoAlerta, alerta, nuevoJuego} =useContext(base);
+    const {
+            estadoMensaje,
+            setEstadoMensaje,
+            mensaje,
+            btnNuevoJuego
+    } = useContext(stateContext);
 
-    useEffect(()=>{
+    const refMensaje = useRef();
 
-        let tiempo;
+    useEffect(() => {
+        if (estadoMensaje === true) {
 
-        tiempo = setTimeout(() => {
-            if (estadoAlerta === true) {
-                cambiarEstadoAlerta(false);
-                
-                nuevoJuego.current.disabled = false;
-                nuevoJuego.current.style='none'
-            }
-        }, 1800);
-
-        return(() => clearTimeout(tiempo))
-        
-    },[estadoAlerta, cambiarEstadoAlerta, nuevoJuego]);
+            refMensaje.current.addEventListener('animationend', (e) => {
+                setEstadoMensaje(false);
+                btnNuevoJuego.current.disabled = false;
+                btnNuevoJuego.current.style='none';
+            });
+        };
+    },[estadoMensaje, setEstadoMensaje, btnNuevoJuego])
 
     return(
         <>
-        {estadoAlerta &&
-            <ContenedorAlerta alerta={alerta}>
-                <p>{alerta.mensaje}</p>
+        {estadoMensaje &&
+            <ContenedorAlerta ref={refMensaje} mensaje={mensaje}>
+                <p>{mensaje.mensaje}</p>
             </ContenedorAlerta> 
         }
         </>
     )
 };
 
-export {Alerta};
+export {MensajeGanador};

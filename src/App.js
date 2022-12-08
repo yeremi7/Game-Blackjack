@@ -1,12 +1,11 @@
 import React from 'react';
-import { LogicaDelJuego } from "./componentes/logicaDelJuego";
-import { Alerta } from "./componentes/alerta";
+import { CuerpoDelJuego } from "./componentes/CuerpoDelJuego";
+
 const App = () => {
 
   return (
     <>
-      <Alerta />
-      <LogicaDelJuego />
+      <CuerpoDelJuego />
     </>
   );
 }

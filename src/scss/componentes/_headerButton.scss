@@ -33,12 +33,8 @@ button{
 .nuevoJuego{
     background-color: #F44336;
 
-    &:hover{
-      background-color: #d1463c;
-    }
-
     &:active{
-      background-color: #F44336;  
+      background-color: #d1463c;  
     }
 }
 
@@ -46,32 +42,23 @@ button{
     padding: 5px 6px;
     background-color: hsl(120, 43% , 48%);
 
-    &:hover{
-      background-color: #119247;
-    }
     &:active{
-      background-color: hsl(120, 43% , 48%);
+      background-color: #119247;
     }
 }
 
 .detener{
     background-color: hsl(120, 43% , 48%);
-    
-    &:hover{
-      background-color: #119247;
-    }
+  
     &:active{
-      background-color: hsl(120, 43% , 48%);  
+      background-color: #119247;  
     }
 }
-.mismoTiempo{
+.opcion{
     background-color: hsl(120, 43% , 48%);
 
-    &:hover{
-      background-color: #119247; 
-    }
     &:active{
-      background-color: hsl(120, 43% , 48%);  
+      background-color: #119247;  
     }
 }
 

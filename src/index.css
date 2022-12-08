@@ -52,12 +52,8 @@ button {
   background-color: #F44336;
 }
 
-.nuevoJuego:hover {
-  background-color: #d1463c;
-}
-
 .nuevoJuego:active {
-  background-color: #F44336;
+  background-color: #d1463c;
 }
 
 .pedir {
@@ -65,36 +61,24 @@ button {
   background-color: #46af46;
 }
 
-.pedir:hover {
-  background-color: #119247;
-}
-
 .pedir:active {
-  background-color: #46af46;
+  background-color: #119247;
 }
 
 .detener {
   background-color: #46af46;
 }
 
-.detener:hover {
-  background-color: #119247;
-}
-
 .detener:active {
-  background-color: #46af46;
-}
-
-.mismoTiempo {
-  background-color: #46af46;
-}
-
-.mismoTiempo:hover {
   background-color: #119247;
 }
 
-.mismoTiempo:active {
+.opcion {
   background-color: #46af46;
+}
+
+.opcion:active {
+  background-color: #119247;
 }
 
 @media screen and (max-width: 360px) {
